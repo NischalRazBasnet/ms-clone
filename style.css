@@ -39,6 +39,11 @@ nav {
   font-size: 13px;
 }
 
+a:hover{
+  text-decoration: underline 1px black;
+  text-underline-offset: 5px;
+}
+
 @media (max-width: 620px) {
   .left a {
     display: none;
@@ -83,6 +88,10 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #616161;
 }
 
 .products-section {
@@ -174,33 +183,35 @@ footer {
   padding: 8px 0px;
 }
 
-.ft-end{
+.ft-end {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.left-ft{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.left-item{
-  font-size: 11px;
-  text-decoration: none;
-  color: #616161;
-}
-.right-ft{
+.left-ft {
+  padding: 20px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
 }
 
-.right-item{
+.left-item {
   font-size: 11px;
   text-decoration: none;
   color: #616161;
 }
 
+.right-ft {
+  padding: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.right-item {
+  font-size: 11px;
+  text-decoration: none;
+  color: #616161;
+}
