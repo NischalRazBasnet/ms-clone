@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo/tab.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -21,19 +23,23 @@
         <nav>
           <div class="left">
             <img class="logo" src="assets/logo/logo.png" alt="logo" />
-            <a href="#"><li>Office</li></a>
-            <a href="#"><li>Windows</li></a>
-            <a href="#"><li>Surface</li></a>
-            <a href="#"><li>Xbox</li></a>
-            <a href="#"><li>Deals</li></a>
-            <a href="#"><li>Support</li></a>
+            <a href="#">Office</a>
+            <a href="#">Windows</a>
+            <a href="#">Surface</a>
+            <a href="#">Xbox</a>
+            <a href="#">Deals</a>
+            <a href="#">Support</a>
           </div>
           <div class="right">
-            <i id="bars" class="fa-solid fa-bars"></i>
-            &nbsp;
-            <i class="fa-solid fa-magnifying-glass"></i>
-            &nbsp;
-            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="bar">
+              <i id="bars" class="fa-solid fa-bars"></i>
+            </div>
+            <div class="search">
+              <i id="icons" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="cart">
+              <i id="icons" class="fa-solid fa-cart-shopping"></i>
+            </div>
           </div>
         </nav>
       </header>
@@ -42,7 +48,7 @@
         <div class="d-info">
           <h2>Surface Deals</h2>
           <p>Select Surfaces are on sale now - save while supplies last</p>
-          <button type="submit">
+          <button class="btn" type="submit">
             Shop Now <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
@@ -57,9 +63,8 @@
             See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
             to put her plans into play.
           </p>
-          <a class="learn" href="#"
-            >Learn More <i class="fa-solid fa-chevron-right"></i
-          ></a>
+          <button class="learn" href="#">LEARN MORE</button>
+          <i id="learnrt" class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="p-info">
           <img class="card-image" src="assets/images/card2.png" alt="" />
@@ -68,9 +73,8 @@
             See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
             to put her plans into play.
           </p>
-          <a class="learn" href="#"
-            >Learn More <i class="fa-solid fa-chevron-right"></i
-          ></a>
+          <button class="learn" href="#">LEARN MORE</button>
+          <i id="learnrt" class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="p-info">
           <img class="card-image" src="assets/images/card3.png" alt="" />
@@ -79,9 +83,8 @@
             See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
             to put her plans into play.
           </p>
-          <a class="learn" href="#"
-            >Learn More <i class="fa-solid fa-chevron-right"></i
-          ></a>
+          <button class="learn" href="#">LEARN MORE</button>
+          <i id="learnrt" class="fa-solid fa-chevron-right"></i>
         </div>
         <div class="p-info">
           <img class="card-image" src="assets/images/card4.png" alt="" />
@@ -90,9 +93,8 @@
             See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
             to put her plans into play.
           </p>
-          <a class="learn" href="#"
-            >Learn More <i class="fa-solid fa-chevron-right"></i
-          ></a>
+          <button class="learn" href="#">LEARN MORE</button>
+          <i id="learnrt" class="fa-solid fa-chevron-right"></i>
         </div>
       </section>
 
@@ -105,7 +107,9 @@
             console and PC games. Play together with friends and discover your
             next favorite game.
           </p>
-          <button>Join Now <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="btn">
+            Join Now <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
       </section>
     </main>
