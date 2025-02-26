@@ -17,7 +17,6 @@ main {
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 }
 
 .left {
@@ -34,7 +33,6 @@ nav {
   opacity: 0;
   animation: slidein 0.3s ease-in-out forwards;
   transform: translateX(-20px);
-  /* animation: logo 1s fade-in 0s 1 normal forwards; */
 }
 
 .left > a {
@@ -44,19 +42,15 @@ nav {
   text-decoration: none;
   color: rgb(72, 63, 63);
   list-style: none;
-  animation: fadeInDown 0.3s ease-in-out 0s 1 normal;
 }
 
 .right {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
   gap: 10px;
   animation: slideleft 0.3s ease-in-out 0s 1 normal;
 }
 
 #icons {
-  padding: 2px;
   height: 16px;
   cursor: pointer;
 }
@@ -67,9 +61,43 @@ a:hover {
 }
 
 #bars {
+  /* padding: 5px; */
   display: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.drop-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  min-width: 90px;
+  right: 0px;
+  top: 25px;
+  z-index: 1000;
+}
+
+.drop-content a {
+  display: block;
+  font-size: 13px;
+  padding: 5px;
+  text-decoration: none;
+  background: rgba(72, 63, 63, 0.168);
+  color: #000000;
+}
+
+.drop-content :hover {
+  text-decoration: underline 1px black;
+  text-underline-offset: 6px;
 }
 
 .deals-section {
@@ -108,6 +136,8 @@ p {
 
 .btn:hover {
   background-color: #616161;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .products-section {
@@ -158,11 +188,17 @@ p {
   background-color: transparent;
   text-decoration: none;
   color: rgb(0, 103, 184);
-  padding: 5px;
+  padding: 5px 0px;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
 #learnrt {
   color: rgb(0, 103, 184);
+}
+
+.learn:hover {
+  padding-right: 5px;
 }
 
 .xbox-section {
@@ -291,11 +327,21 @@ footer {
 
 /* Media Query */
 @media (max-width: 620px) {
-  .left a {
+  .left > a {
     display: none;
   }
+
+  .dropdown {
+    position: relative;
+    display: block;
+  }
+
   #bars {
     display: inline-block;
+  }
+
+  .dropdown:focus-within .drop-content {
+    display: block;
   }
 }
 
