@@ -31,6 +31,9 @@ nav {
   height: 23px;
   padding-right: 25px;
   cursor: pointer;
+  opacity: 0;
+  animation: slidein 0.3s ease-in-out forwards;
+  transform: translateX(-20px);
   /* animation: logo 1s fade-in 0s 1 normal forwards; */
 }
 
@@ -41,6 +44,7 @@ nav {
   text-decoration: none;
   color: rgb(72, 63, 63);
   list-style: none;
+  animation: fadeInDown 0.3s ease-in-out 0s 1 normal;
 }
 
 .right {
@@ -48,6 +52,7 @@ nav {
   justify-content: space-between;
   align-items: end;
   gap: 10px;
+  animation: slideleft 0.3s ease-in-out 0s 1 normal;
 }
 
 #icons {
@@ -65,15 +70,6 @@ a:hover {
   display: none;
   font-size: 16px;
   cursor: pointer;
-}
-
-@media (max-width: 620px) {
-  .left a {
-    display: none;
-  }
-  #bars {
-    display: inline-block;
-  }
 }
 
 .deals-section {
@@ -125,6 +121,24 @@ p {
   margin-bottom: 15px;
 }
 
+.p-info {
+  opacity: 0;
+  animation: slidein 0.1s ease-in-out forwards;
+}
+
+.p-info:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.p-info:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.p-info:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.p-info:nth-child(4) {
+  animation-delay: 1s;
+}
+
 .p-info:hover {
   border: none;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -164,36 +178,10 @@ p {
   animation: slideleft 1s ease-in-out 0s 1 normal;
 }
 
-@keyframes slideleft {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .x-info {
   font-size: 9px;
   width: 40%;
   padding: 10% 4% 6%;
-}
-
-@media (max-width: 720px) {
-  .xbox-section {
-    background-size: cover;
-    background-position: center;
-    background-color: rgb(205, 201, 201);
-    background-blend-mode: darken;
-  }
-
-  .x-info {
-    background-color: rgba(205, 201, 201, 0.5);
-    border: none;
-    /* backdrop-filter: blur(5px); */
-    width: 100%;
-    padding: 10% 4% 6%;
-  }
 }
 
 footer {
@@ -260,4 +248,70 @@ footer {
   font-size: 11px;
   text-decoration: none;
   color: #616161;
+}
+
+/* Animation CSS */
+/* nav menu Animation*/
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* logo and product Animation */
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* icons and xbox animation */
+@keyframes slideleft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Query */
+@media (max-width: 620px) {
+  .left a {
+    display: none;
+  }
+  #bars {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 620px) {
+  .xbox-section {
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(205, 201, 201);
+    background-blend-mode: darken;
+  }
+
+  .x-info {
+    background-color: rgba(205, 201, 201, 0.5);
+    border: none;
+    /* backdrop-filter: blur(5px); */
+    width: 100%;
+    padding: 10% 4% 6%;
+  }
 }
